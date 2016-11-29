@@ -109,7 +109,7 @@
                 return;
             }
             pos = e.pageX - _this.$sliderHolder.offset().left;
-            if (0 >= pos || pos >= _this.spanSize * _this.spanWidth) {
+            if (0 >= pos || pos >= _this.spanSize * _this.spanWidth || _this.getSliderPos(_this.options.minValue) >= pos) {
                 return;
             }
             level = Math.ceil(pos / _this.spanWidth);
